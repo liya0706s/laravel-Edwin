@@ -21,4 +21,6 @@ Route::get('/post/{id}', [PostsController::class, 'index']);
 Route::resource('posts', PostsController::class);
 // 使用控制器类的完全限定名定义资源路由
 
-Route::get('contact',[PostsController::class, 'contact']);
+Route::get('/contact',[PostsController::class, 'contact']);
+
+Route::get('post/{id}/{name}/{password}',[PostsController::class,'show_post']);
